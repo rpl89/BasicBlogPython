@@ -1,0 +1,18 @@
+<!-- Carga el archivo base.html que se usará como plantilla -->
+{% extends 'base.html' %}
+
+<!-- Titulo de la página en el navegador -->
+{% block title %}Mi blog{% endblock %}
+
+<!-- Contenido, bloque central -->
+{% block content %}
+
+	{% for articulo in articulos %} 
+		<h1><a href="/articulo/{{ articulo.id }}">{{ articulo.titulo }}</a><small> | {{ articulo.categoria }}</small></h1>
+		
+		<small>{{ articulo.fecha }}</small>
+		<p class="contenido">{{ articulo.contenido }}</p> 
+		<hr>
+	{% endfor %} 
+
+{% endblock %} 

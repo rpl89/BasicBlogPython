@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+<!-- Titulo de la página en el header -->
+{% block title %}Nuevo Comentario{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+	<form id='formulario' method='post' action=''>{% csrf_token %}
+		<table>{{formulario}}</table>
+		<p><input type='submit' value='Nuevo Comentario'/></p>
+	</form>
+</div>	
+{% endblock %}
